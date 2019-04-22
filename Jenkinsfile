@@ -1,10 +1,11 @@
 pipeline{
 	tools {
         maven 'LocalMaven'
-        docker 'maven:3-alpine'
     }
     
-	agent any
+	agent {
+		docker { image 'node:7-alpine' }
+	}
 	stages
 	{
 		stage('Build'){
