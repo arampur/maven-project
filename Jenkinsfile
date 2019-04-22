@@ -1,12 +1,9 @@
 pipeline{
 	tools {
         maven 'LocalMaven'
+        docker 'maven:3-alpine'
     }
     
-    environment {
-    registry = "arampur89/tomcatwebapp"
-    registryCredential = 'dockerhub'
- 	}
 	agent any
 	stages
 	{
