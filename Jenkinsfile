@@ -2,6 +2,9 @@ pipeline{
 	tools {
         maven 'LocalMaven'
     }
+    docker {
+    image 'maven:LocalMaven-jdk-8'
+  	}
 	agent any
 	stages
 	{
