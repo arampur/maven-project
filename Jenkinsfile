@@ -2,9 +2,11 @@ pipeline{
 	tools {
         maven 'LocalMaven'
     }
-    docker {
-    image 'maven:LocalMaven-jdk-8'
-  	}
+    
+    environment {
+    registry = "arampur89/tomcatwebapp"
+    registryCredential = 'dockerhub'
+ 	}
 	agent any
 	stages
 	{
